@@ -1,0 +1,32 @@
+.experience {
+    position: absolute;
+    ul {
+        list-style: none;
+
+        li {
+            padding: 7px 0;
+            display: block;
+            font-size: 15px;
+            line-height: 16px;
+            color: white;
+            text-decoration: underline;
+
+            &:hover {
+                transform: scale(2);
+                display: block;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+.exp-container {
+    width: 55%;
+    height: 100%;
+    top: 0;
+    margin-left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
