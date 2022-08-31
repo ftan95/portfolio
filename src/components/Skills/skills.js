@@ -8,6 +8,7 @@ import HTML from '../../assets/images/HTML.png'
 import Cpp from '../../assets/images/Cpp.png'
 import aws from '../../assets/images/aws.png'
 import firebase from '../../assets/images/firebase.png'
+import git from '../../assets/images/git.png';
 
 const Skills = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -44,7 +45,7 @@ const Skills = () => {
           </p>
           <p>
             Visit my Github for some of my personal projects. Also you can check
-            out my resume on this link
+            out my resume on this <a href='https://drive.google.com/file/d/1ii-l0lgTIACuYuGO0YNC6IDQCMTbmf6O/view?usp=sharing'>link</a>
           </p>
         </div>
         <div className="skills">
@@ -82,7 +83,7 @@ const Skills = () => {
             <h1>Integration and Deployment</h1>
             <div className="skill-list">
               <img
-                src="https://assets.stickpng.com/thumbs/62a6360f03a870b920cbfd41.png"
+                src={git}
                 alt="git"
               />
               <img

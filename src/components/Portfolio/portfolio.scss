@@ -27,6 +27,15 @@
     top: 0;
     margin-left: 0;
     position: absolute;
-    right: 0;
+    right: 5px;
     overflow: hidden;
+}
+
+.exp-load {
+    font-size: 53px;
+    font-family: 'Coolvetica';
+    color: yellow;
+    font-weight: 400;
+    position: relative;
+    margin: 30%;
 }

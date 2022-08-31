@@ -9,12 +9,21 @@ import Loader from 'react-loaders';
 const Portfolio = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const [show, setShow] = useState(1);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
+
+    const switchHandler = (id) => {
+        setLoading(true);
+        setTimeout(() => {
+            setShow(id);
+            setLoading(false);
+        }, 1000)
+    }
 
     return (
         <>
@@ -25,20 +34,17 @@ const Portfolio = () => {
                     </h1>
                     <div className='experience'>
                         <ul>
-                            <li onClick={() => setShow(1)}><p>Dobid</p></li>
-                            <li onClick={() => setShow(2)}><p>CEnergi</p></li>
-                            <li onClick={() => setShow(3)}><p>ValleyWorx</p></li>
+                            <li onClick={() => switchHandler(1)}><p>Dobid</p></li>
+                            <li onClick={() => switchHandler(2)}><p>CEnergi</p></li>
+                            <li onClick={() => switchHandler(3)}><p>ValleyWorx</p></li>
                         </ul>
                     </div>
-                    {/* <h1>
-                        <AnimatedLetters letterClass={letterClass} strArray={['P', 'r', 'o', 'j', 'e', 'c', 't', 's']} idx={15}/> 
-                    </h1> */}
                 </div>
                 <div className='exp-container'>
-                    {show === 1 && (<Dobid />)}
-                    {show === 2 && (<Cenergi />)}
-                    {show === 3 && (<ValleyWorx />)}
-                    <Loader type="pacman" />
+                    {show === 1 && !loading && (<Dobid />)}
+                    {show === 2 && !loading && (<Cenergi />)}
+                    {show === 3 && !loading && (<ValleyWorx />)}
+                    {loading && <h1 className='exp-load'>Loading...</h1>}
                 </div>
             </div>
             <Loader type="pacman" />

@@ -107,6 +107,24 @@
                 animation-delay: 1.3s;
             }
         }
+
+        a {
+            font-style: 13px;
+            color: yellow;
+            font-family: sans-serif;
+            font-weight: 300;
+            min-width: fit-content;
+            animation: pulse 1s;
+            font-size: 1.5vw;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        a:hover {
+            color: white;
+        }
     }
 
     .text-animate-hover {
@@ -134,9 +152,23 @@
     }
 
     a {
-        text-decoration: none;
+        font-style: 13px;
+        color: yellow;
+        font-family: sans-serif;
+        font-weight: 300;
+        min-width: fit-content;
+        animation: pulse 1s;
+        font-size: 1.5vw;
     }
 
-    animation: fadeIn 0.5s 1s;
+    a:visited {
+        color: yellow;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    animation: fadeIn 0.5s;
     animation-fill-mode: forwards;
 }
